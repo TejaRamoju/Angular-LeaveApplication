@@ -1,0 +1,30 @@
+[
+    {
+        "employeeName":"jeff Hall",
+        "jobTitle":"Design Lead",
+        "city":"Shanghal",
+        "connection":"Very strong",
+        "status":"Pending"
+    },
+    {
+        "employeeName":"Clarence Ortiz",
+        "jobTitle":"Head of Design",
+        "city":"Shanghal",
+        "connection":"Very strong",
+        "status":"Approved"
+    },
+    {
+        "employeeName":"Edward Manning",
+        "jobTitle":"Front-end engineer",
+        "city":"Shanghal",
+        "connection":"Very strong",
+        "status":"Pending"
+    },
+    {
+        "employeeName":"Hall Jordan",
+        "jobTitle":"UX/UI Designer",
+        "city":"Shanghal",
+        "connection":"Very strong",
+        "status":"Pending"
+    }
+]

@@ -1,0 +1,22 @@
+<div class="container card w-50 h-50 mt-5 ">
+
+    <div class="card-body">
+  
+      <div class="container  mt-2  mb-5">
+        <form #loginForm="ngForm" (ngSubmit)="addLogIn()">
+          <div>
+            <label  for = "username" class="form-label mt-1" >User Name</label>
+            <input  type="text" id="username" required [(ngModel)]="loginModel.username" name="username"  class="form-control">
+          </div>
+          <div>
+            <label for="password" class="form-label mt-2  " >Password</label>
+            <input type="password" id="password" class="form-control"  required [(ngModel)]="loginModel.password" name="password">
+        </div>
+        
+        
+        <button type="submit" [disabled]="loginForm.invalid"  class="btn btn-primary mt-3 mb-1">Login</button>
+      </form>  
+
+      <p class="mt-2">Don't have an Account : <a routerLink="/signup">Sing-up</a></p>
+    </div>
+</div> 

@@ -1,0 +1,44 @@
+
+<div class="container card w-50 h-50 mt-5 ">
+
+  <div class="card-body">
+
+    <div class="container mb-5">
+      <form #leavForm="ngForm" (ngSubmit)="addLeave()">
+        <div>
+          <label for="Leavetype" class="form-label" >Leave type</label>
+         <select id="Leavetype" class="form-select" required [(ngModel)]="formData.leaveType" name="Leavetype">  
+          <option value="Sick Leave">Sick Leave</option>
+            <option value="Optional Leave">Optional Leave</option>
+            <option value="Vecation Leave">Vecation Leave</option>
+          </select>
+        </div>
+        <div>
+          <label  class="form-label" >Number of Days</label>
+          <input  type="number" required [(ngModel)]="formData.leaveDays" name="LeaveDays"  class="form-control">
+        </div>
+        
+      <div>
+        <label for="JobTitle" class="form-label" >Job Role</label>
+        <input type="text" class="form-control"  required [(ngModel)]="formData.jobTitle" name="JobTitle">
+      </div>
+      <div>
+        <label for="City" class="form-label" >City</label>
+        <input type="text" class="form-control"  required [(ngModel)]="formData.city" name="City">
+      </div>
+      <div>
+        <label for="Connection" class="form-label" >Connection</label>
+        <input type="text" class="form-control"  required [(ngModel)]="formData.connection" name="Connection">
+      </div>
+      
+      <button type="submit"  class="btn btn-primary mt-3 mb-5">Submit</button>
+    </form>  
+  </div>
+  </div>  
+  
+  
+  
+  
+  
+</div>
+  

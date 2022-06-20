@@ -1,0 +1,48 @@
+<div class="container card w-50 h-50 mt-5 ">
+
+    <div class="card-body">
+  
+      <div class="container mb-5">
+        <form #loginForm="ngForm" (ngSubmit)="signUpFunction()">
+
+        <!-- <label for="checkbox">Admin</label>
+        <input type="checkbox" (click)="addAdmin()" value="Admin" name = "Admin" id = "Admin">
+        <label for="user">User</label>
+        <input type="checkbox" value="user" name = "user" id = "user"> -->
+
+
+      <!-- <div class="btn-group mt-3" role="group" >
+        <button type="button"  (click)="addAdmin()" class="btn btn-outline-secondary me-3 text-dark " style="border-radius: 5px;">Admin</button>
+        <button type="button" class="btn btn-outline-secondary me-2 text-dark" style="border-radius: 5px;">User</button>
+      </div> -->
+      <div class="mt-3 mb-3">
+        <div class="form-check form-switch form-check-inline">
+          <input class="form-check-input" type="checkbox" id="admin" (click)="addAdmin()">
+          <label class="form-check-label" for="admin">Admin</label>
+        </div>
+        <div class="form-check form-switch form-check-inline  ">
+          <input class="form-check-input" type="checkbox" id="user" >
+          <label class="form-check-label" for="user">User</label>
+        </div>
+      </div>
+          
+          <div class="mt-2">
+            <label  for = "username" class="form-label" >User Name</label>
+            <input  type="text" id="username" required [(ngModel)]="signupModel.username" name="username"  class="form-control">
+          </div>
+          <div class="mt-2">
+            <label for="password" class="form-label" >Password</label>
+            <input type="password" id="password" class="form-control"  required [(ngModel)]="signupModel.password" name="password">
+        </div>
+        <div class="mt-2">
+            <label for="confirmPassword" class="form-label" >Confirm Password</label>
+            <input type="password" id=""confirmPassword class="form-control"  required [(ngModel)]="signupModel.confirmPassword" name="Confirm spassword">
+        </div>
+        
+        <button type="submit" [disabled]="loginForm.invalid"  class="btn btn-primary mt-4 mb-1">Signup</button>
+      </form>  
+
+      <p class="mt-3">Already have an Account : <a routerLink="/">Log-in</a></p>
+
+    </div>
+</div> 

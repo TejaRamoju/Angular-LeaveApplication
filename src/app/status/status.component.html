@@ -1,0 +1,69 @@
+
+<div class = "mt-5 container">
+    <table class="table table-striped table-dark table-bordered">
+      <thead>
+        
+        <tr>
+          <th>Employee Name</th>
+          <th>Job Title</th>
+          <th>City</th>
+          <th>Connection</th>
+          <th>Status</th>
+          <th>Date of Application</th>
+        </tr>
+
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let employee of employeeData">
+          <td>{{employee.employeeName}}</td>
+          <td>{{employee.jobTitle}}</td>
+          <td>{{employee.city}}</td>
+          <td>{{employee.connection}}</td>
+          <td [ngClass]="{'text-success':employee.status =='Approved', 'text-danger':employee.status =='Rejected', 'text-warning':employee.status =='Pending'}" >{{employee.status}}</td>
+          <td>{{employee.date}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  
+
+
+
+
+  
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Employee Name : {{ employeeDetailsForModal.employeeName }}</p>
+        <p>Job Title : {{ employeeDetailsForModal.jobTitle }}</p>
+        <p>City : {{ employeeDetailsForModal.city }}</p>
+        <p>Connection : {{ employeeDetailsForModal.connection }}</p>
+        <p>Status : {{ employeeDetailsForModal.status }}</p>
+      </div>
+      <hr/>
+      <div class=" d-flex align-items-center justify-content-between m-2">
+        <div class=" float-start  ">
+        <button class="btn btn-success m-2" data-bs-dismiss="modal" (click)="changeStatus('Approved', employeeDetailsForModal.id)">
+          Approve
+        </button>
+        <button class="btn btn-danger" data-bs-dismiss="modal" (click)="changeStatus('Rejected', employeeDetailsForModal.id)">
+          Reject
+        </button>
+
+      </div>
+
+        <button type="button" class="btn btn-secondary float-end me-2 " data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
